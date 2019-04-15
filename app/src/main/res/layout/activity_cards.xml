@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CardsActivity"
+    android:background="@color/colorFond">
+
+    <ScrollView
+        android:id="@+id/scrollViewC"
+        android:layout_width="match_parent"
+        android:layout_height="300dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="10dp">
+
+            <EditText
+                android:id="@+id/editTextCardId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/numbercard"/>
+
+                <com.santalu.maskedittext.MaskEditText
+                    android:id="@+id/editTextTarjeta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/capsuletext"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:maxLength="16"
+                    android:hint="Ingresar Número de Tarjeta"
+                    android:inputType="number"
+                    app:met_mask="#### #### #### ####"/>
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/user"/>
+
+                <EditText
+                    android:id="@+id/editTextTitular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/capsuletext"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="Nombre Completo del Titular"
+                    android:inputType="textCapWords" />
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/calendar"/>
+
+                <com.santalu.maskedittext.MaskEditText
+                    android:id="@+id/editTextFecha"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/capsuletext"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:maxLength="5"
+                    android:hint="Fecha de Vencimiento (MM/AA)"
+                    android:inputType="date"
+                    app:met_mask="##/##"/>
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/cvv"/>
+
+                <EditText
+                    android:id="@+id/editTextCVV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/capsuletext"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:maxLength="3"
+                    android:hint="Codigo de Seguridad (CVV)"
+                    android:inputType="numberPassword" />
+            </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/checkboxCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mostrar Código"
+                android:onClick="showCode"
+                android:textColor="@color/colorWhite"/>
+
+            <Button
+                android:id="@+id/buttonAddUpdateC"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="functionCard"
+                android:text="Añadir"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <ListView
+        android:id="@+id/listViewTarjetas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_below="@id/scrollViewC" />
+
+    <ProgressBar
+        android:id="@+id/progressBarC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone" />
+</RelativeLayout>

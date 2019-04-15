@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_camera"
+            android:icon="@drawable/acount"
+            android:title="Usuario" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/vehicle"
+            android:title="Vehículos" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/card"
+            android:title="Tarjetas" />
+    </group>
+
+    <item android:title="Parking">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/parkcar"
+                android:title="Estacionarme" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/logout"
+                android:title="Cerrar Sesión" />
+        </menu>
+    </item>
+
+</menu>

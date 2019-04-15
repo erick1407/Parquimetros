@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorFond3"
+    tools:context=".HistoryActivity">
+
+
+    <TextView
+        android:id="@+id/textViewHisto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:fontFamily="casual"
+        android:textColor="@color/colorFond"
+        android:gravity="center"
+        android:layout_margin="10dp"
+        android:textSize="18sp"
+        android:text="Historial de Pagos" />
+
+    <ListView
+        android:layout_below="@+id/textViewHisto"
+        android:id="@+id/listViewPagos"
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:layout_height="600dp"
+        tools:layout_editor_absoluteX="-3dp"
+        tools:layout_editor_absoluteY="-3dp"/>
+
+</RelativeLayout>

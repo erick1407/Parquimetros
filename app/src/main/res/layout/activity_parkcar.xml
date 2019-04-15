@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorFond"
+    tools:context=".ParkcarActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Minutos Agragados Anteriormente:"
+                android:textColor="@color/colorWhite"
+                android:textSize="20sp"
+                app:fontFamily="casual" />
+
+            <TextView
+                android:id="@+id/textViewTi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="40sp"
+                app:fontFamily="casual" />
+
+            <EditText
+                android:id="@+id/editTextInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/text_view_countdown"
+                android:layout_centerHorizontal="true"
+                android:hint="Minutos"
+                android:gravity="center"
+                android:inputType="number"
+                android:visibility="invisible"
+                tools:visibility="gone"
+                android:maxLength="4" />
+
+            <Button
+                android:id="@+id/buttonSet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Agregar"
+                android:visibility="invisible"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/timecountdown"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/text_view_countdown"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="00:00"
+                android:textColor="@color/colorWhite"
+                android:textSize="50dp"
+                app:fontFamily="casual" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/buttonStartPause"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:text="Iniciar" />
+
+                <Button
+                    android:id="@+id/buttonReset"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/text_view_countdown"
+                    android:layout_margin="5dp"
+                    android:layout_marginLeft="11dp"
+                    android:layout_marginStart="11dp"
+                    android:layout_toEndOf="@+id/button_start_pause"
+                    android:layout_toRightOf="@+id/button_start_pause"
+                    android:layout_weight="1"
+                    android:text="Reiniciar"
+                    android:visibility="invisible"
+                    tools:visibility="visible" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Detener"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:onClick="detener"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

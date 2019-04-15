@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:title="Ver Lugares en Mapa"
+        android:iconTint="#FFFFFF"
+        android:icon="@drawable/mapa_ico"
+        app:showAsAction="ifRoom"
+        android:onClick="lugares"/>
+</menu>
